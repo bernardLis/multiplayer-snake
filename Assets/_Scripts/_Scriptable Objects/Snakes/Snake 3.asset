@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9aaf249db5ac7f4683d351aac81eff5, type: 3}
+  m_Name: Snake 3
+  m_EditorClassIdentifier: 
+  Name: 
+  MovementSchema: 3
+  Color: {r: 0, g: 0, b: 0, a: 0}
+  IsActive: 0
+  Buttons:
+  - {fileID: 21300000, guid: 9db641c6b3baead4686ef576794e7a6e, type: 3}
+  - {fileID: 21300000, guid: 1e100c4990c9a714198f4619ae8c4e55, type: 3}
+  - {fileID: 21300000, guid: fa035edfe0e898e489c4fce435a3ec73, type: 3}
+  - {fileID: 21300000, guid: 19045ca04383e9e4b8bcd22418c21a82, type: 3}

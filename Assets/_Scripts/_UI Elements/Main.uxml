@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Scripts/_UI%20Elements/Main.uss?fileID=7433441132597879392&amp;guid=53a2457eb8a973f4b9aa02b58958b336&amp;type=3#Main" />
+    <Style src="project://database/Assets/_Scripts/_UI%20Elements/Menu.uss?fileID=7433441132597879392&amp;guid=2185b9a7e2ed2524ab4d19f89047950f&amp;type=3#Menu" />
+    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="timer" style="background-color: rgba(0, 0, 0, 0.47); color: rgb(255, 255, 255); align-items: auto; position: absolute; top: 20px; left: auto; align-self: center;" />
+</ui:UXML>
