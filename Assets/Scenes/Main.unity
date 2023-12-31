@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c08a5c41f6c2534393ad80118137a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameMusic: {fileID: 11400000, guid: 19fc896bae603c343adedd07fa5c7088, type: 2}
   Setting: {fileID: 11400000, guid: 1b1ba2657d22d91499a38a2156ad278c, type: 2}
   _tileHolder: {fileID: 624526306}
   _tilePrefab: {fileID: 5020440465018178188, guid: 1042e068d61616441b3ce24ae23f59b1, type: 3}
@@ -252,7 +253,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
@@ -261,14 +261,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0

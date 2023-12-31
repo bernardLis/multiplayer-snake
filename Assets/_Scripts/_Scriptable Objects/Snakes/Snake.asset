@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   MovementSchema: 0
+  JoinSound: {fileID: 11400000, guid: 6ef937d6afc09b744b9d09f1e12e137b, type: 2}
   Color: {r: 0, g: 0, b: 0, a: 0}
   IsActive: 0
   Buttons:
@@ -21,3 +22,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e8ccc77da3da6e247b66cebc6a5478c1, type: 3}
   - {fileID: 21300000, guid: d4c360a50d92bc848b36c98ccedfd3cb, type: 3}
   - {fileID: 21300000, guid: cbdb4a5b9c264ab49ab3ab3592e98c2b, type: 3}
+  Size: 0

@@ -132,13 +132,16 @@ public class SnakeController : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log($"Die");
+        AudioManager.Instance.PlaySFX("Death");
         if (_moveCoroutine != null) StopCoroutine(_moveCoroutine);
         DOTween.Kill(transform);
 
         OnDeath?.Invoke(_snake);
         foreach (GameObject segment in _snakeSegments)
+        {
+            DOTween.Kill(segment);
             Destroy(segment);
+        }
         Destroy(gameObject);
     }
 

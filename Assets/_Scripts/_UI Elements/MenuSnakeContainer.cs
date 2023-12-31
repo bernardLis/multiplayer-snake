@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class MenuSnakeContainer : VisualElement
 {
+    AudioManager _audioManager;
     MenuManager _menuManager;
     PlayerInput _playerInput;
 
@@ -16,6 +17,8 @@ public class MenuSnakeContainer : VisualElement
     Snake _snake;
     public MenuSnakeContainer(Snake snake)
     {
+        _audioManager = AudioManager.Instance;
+
         _snake = snake;
 
         AddToClassList("snakeContainer");
@@ -76,6 +79,7 @@ public class MenuSnakeContainer : VisualElement
         _joinLabel.text = "Press key to change color";
         _snake.IsActive = true;
 
+        _audioManager.PlaySFX(_snake.JoinSound);
         SetColor();
     }
 
@@ -93,6 +97,8 @@ public class MenuSnakeContainer : VisualElement
             Random.Range(0f, 1f),
             Random.Range(0f, 1f)
         );
+
+        _audioManager.PlaySFX("Change Color");
 
         _snake.Color = random;
         _colorContainer.style.backgroundColor = random;

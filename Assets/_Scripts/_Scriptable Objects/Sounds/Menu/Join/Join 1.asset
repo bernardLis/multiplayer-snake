@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8652f65cbd296eb4eb1c613b23d2a040, type: 3}
+  m_Name: Join 1
+  m_EditorClassIdentifier: 
+  Id: ae7666b5-9887-49e1-9e80-2b11f4599c07
+  Clips:
+  - {fileID: 8300000, guid: 4944bfbec0975ad4e9af8e73ac97fd07, type: 3}
+  Volume: 1
+  Pitch: 1
+  isPitchRandomized: 0
+  PitchRange: {x: 0, y: 0}
+  Source: {fileID: 0}

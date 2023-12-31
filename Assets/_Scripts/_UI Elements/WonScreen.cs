@@ -34,14 +34,10 @@ public class WonScreen : VisualElement
         buttons.style.flexDirection = FlexDirection.Row;
         Add(buttons);
 
-        Button restartButton = new(() => _gameManager.RestartGame());
-        restartButton.text = "Restart";
-        restartButton.AddToClassList("button");
+        MyButton restartButton = new("Restart", callback: () => _gameManager.RestartGame());
         buttons.Add(restartButton);
 
-        Button menuButton = new(() => _gameManager.GoToMenu());
-        menuButton.text = "Menu";
-        menuButton.AddToClassList("button");
+        MyButton menuButton = new("Menu", callback: () => _gameManager.GoToMenu());
         buttons.Add(menuButton);
     }
 }

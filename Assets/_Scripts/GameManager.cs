@@ -10,6 +10,9 @@ using DG.Tweening;
 
 public class GameManager : Singleton<GameManager>
 {
+    AudioManager _audioManager;
+    [SerializeField] Sound GameMusic;
+
     public Setting Setting;
 
     [Header("Grid")]
@@ -35,6 +38,9 @@ public class GameManager : Singleton<GameManager>
     public event Action OnRestart;
     void Start()
     {
+        _audioManager = AudioManager.Instance;
+        _audioManager.PlayMusic(GameMusic);
+
         Root = GetComponent<UIDocument>().rootVisualElement;
 
         VisualElement fade = new();
@@ -130,6 +136,7 @@ public class GameManager : Singleton<GameManager>
 
     void ShowWonScreen(Snake snake)
     {
+        _audioManager.PlaySFX("Win");
         Time.timeScale = 0;
         _wonScreen = new(snake);
     }
@@ -164,6 +171,8 @@ public class GameManager : Singleton<GameManager>
             s.Size = 0;
         _time = 0;
         OnRestart?.Invoke();
+
+        _audioManager.PlaySFX("Play Click");
 
         DOTween.To(x => _wonScreen.style.opacity = x, _wonScreen.style.opacity.value, 0, 0.5f)
                 .SetUpdate(true)

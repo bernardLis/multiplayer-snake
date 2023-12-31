@@ -8,6 +8,7 @@ public class Snake : ScriptableObject
     public string Name;
 
     public SnakeMovementSchemas MovementSchema;
+    public Sound JoinSound;
     public Color Color;
     public bool IsActive;
     public List<Sprite> Buttons;

@@ -6,19 +6,26 @@ using DG.Tweening;
 using UnityEngine.SceneManagement;
 using System;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 public class MenuManager : Singleton<MenuManager>
 {
+    AudioManager _audioManager;
+    [SerializeField] Sound MenuMusic;
 
     VisualElement _root;
 
     public Snake[] Snakes;
 
-    Button _playButton;
+    MyButton _playButton;
 
     public event Action OnGameStarted;
     void Start()
     {
+        _audioManager = AudioManager.Instance;
+        _audioManager.PlayMusic(MenuMusic);
+
+
         // get the root visual element
         _root = GetComponent<UIDocument>().rootVisualElement;
         VisualElement snakeContainer = _root.Q<VisualElement>("snakes");
@@ -33,17 +40,20 @@ public class MenuManager : Singleton<MenuManager>
         }
 
         // play button
-        _playButton = _root.Q<Button>("playButton");
-        _playButton.clicked += () => { StartGame(); };
+        VisualElement playButtonContainer = _root.Q<VisualElement>("playButtonContainer");
+        _playButton = new MyButton("Play", callback: StartGame);
+        playButtonContainer.Add(_playButton);
 
-        // settings
-        // options
+        // game settings
 
+
+        // options optionsContainer
+        VisualElement optionsContainer = _root.Q<VisualElement>("optionsContainer");
+        optionsContainer.Add(new OptionsElement());
     }
 
     void StartGame()
     {
-
         bool isAnySnakeActive = false;
         foreach (Snake snake in Snakes)
         {
@@ -56,11 +66,12 @@ public class MenuManager : Singleton<MenuManager>
 
         if (!isAnySnakeActive)
         {
+            _audioManager.PlaySFX("Death");
             Helpers.DisplayTextOnElement(_root, _playButton, "No snakes selected", Color.red);
             return;
         }
 
-        // TODO: music - fade out
+        _audioManager.PlaySFX("Play Click");
         OnGameStarted?.Invoke();
 
         VisualElement fade = new();

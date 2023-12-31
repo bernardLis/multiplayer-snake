@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9aaf249db5ac7f4683d351aac81eff5, type: 3}
   m_Name: Snake 3
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Bombshell
   MovementSchema: 3
-  Color: {r: 0, g: 0, b: 0, a: 0}
-  IsActive: 0
+  JoinSound: {fileID: 11400000, guid: 62441715f736e4c439e91315bbebe91e, type: 2}
+  Color: {r: 0.6967565, g: 0.20836914, b: 0.20403576, a: 1}
+  IsActive: 1
   Buttons:
   - {fileID: 21300000, guid: 9db641c6b3baead4686ef576794e7a6e, type: 3}
   - {fileID: 21300000, guid: 1e100c4990c9a714198f4619ae8c4e55, type: 3}
   - {fileID: 21300000, guid: fa035edfe0e898e489c4fce435a3ec73, type: 3}
   - {fileID: 21300000, guid: 19045ca04383e9e4b8bcd22418c21a82, type: 3}
+  Size: 0

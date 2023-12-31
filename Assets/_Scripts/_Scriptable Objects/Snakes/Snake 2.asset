@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9aaf249db5ac7f4683d351aac81eff5, type: 3}
   m_Name: Snake 2
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Santa Paws
   MovementSchema: 2
-  Color: {r: 0, g: 0, b: 0, a: 0}
-  IsActive: 0
+  JoinSound: {fileID: 11400000, guid: 33cae823ccd40dc46a8f17a44cffb58a, type: 2}
+  Color: {r: 0.3140573, g: 0.03522885, b: 0.5986646, a: 1}
+  IsActive: 1
   Buttons:
   - {fileID: 21300000, guid: 6dbb05ffb8bc56a478989206fe928b73, type: 3}
   - {fileID: 21300000, guid: b0b357cd4786f9f419828fafa03815b7, type: 3}
   - {fileID: 21300000, guid: 575a2da5ad098de42bc3ba7b76d804cb, type: 3}
   - {fileID: 21300000, guid: 2e1d2429d22aecd42b55b01b454482a1, type: 3}
+  Size: 0
