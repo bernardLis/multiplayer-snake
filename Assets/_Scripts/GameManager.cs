@@ -94,8 +94,8 @@ public class GameManager : Singleton<GameManager>
     void SetUpCamera()
     {
         Camera camera = Camera.main;
-        camera.transform.position = Setting.CameraPosition;
-        camera.orthographicSize = Setting.CameraSize;
+        camera.transform.position = Setting.GridSize.CameraPosition;
+        camera.orthographicSize = Setting.GridSize.CameraSize;
     }
 
     public GameObject GetRandomFreeTile()

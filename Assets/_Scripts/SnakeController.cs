@@ -39,7 +39,7 @@ public class SnakeController : MonoBehaviour
 
         SubscribeInputActions();
 
-        _speed = _setting.SnakeSpeed;
+        _speed = _setting.Snake.SnakeSpeed;
         _moveCoroutine = MoveCoroutine();
         StartCoroutine(_moveCoroutine);
     }

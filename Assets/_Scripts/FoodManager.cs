@@ -22,7 +22,7 @@ public class FoodManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(_gameManager.Setting.FoodSpawnRate);
+            yield return new WaitForSeconds(_gameManager.Setting.Food.FoodSpawnRate);
             Vector3 pos = _gameManager.GetRandomFreeTile().transform.position;
             pos.z = -0.5f;
             Food food = Instantiate(_foodPrefab, pos, Quaternion.identity);

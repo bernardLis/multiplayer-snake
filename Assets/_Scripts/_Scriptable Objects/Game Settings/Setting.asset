@@ -12,8 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629af9378bda284a89ea56a141ba055, type: 3}
   m_Name: Setting
   m_EditorClassIdentifier: 
-  GridSize: {x: 31, y: 21}
-  SnakeSpeed: 1
-  FoodSpawnRate: 1
-  CameraPosition: {x: 15, y: 10, z: -10}
-  CameraSize: 12
+  GridSizeOptions:
+  - {fileID: 11400000, guid: 87118961dea83d248a9ebd252874d245, type: 2}
+  - {fileID: 11400000, guid: a6d8c87e212166b4998fc8968751e020, type: 2}
+  - {fileID: 11400000, guid: c308dc6e01a436e47b96cb6411480427, type: 2}
+  GridSize: {fileID: 11400000, guid: a6d8c87e212166b4998fc8968751e020, type: 2}
+  SnakeOptions:
+  - {fileID: 11400000, guid: af984a803a4be2b47b39aa0aee487ef5, type: 2}
+  - {fileID: 11400000, guid: 432bfe67d82fad44196173bd2ab70527, type: 2}
+  - {fileID: 11400000, guid: 713b0f58134c21149bc4b9f0514f422f, type: 2}
+  Snake: {fileID: 11400000, guid: 432bfe67d82fad44196173bd2ab70527, type: 2}
+  FoodOptions:
+  - {fileID: 11400000, guid: e00d2390184f3564caea3bd497768393, type: 2}
+  - {fileID: 11400000, guid: d5425fb0c6ef566458c2b8c9eca21457, type: 2}
+  - {fileID: 11400000, guid: d59ae9961850f0347ae9f739e14dbaa0, type: 2}
+  Food: {fileID: 11400000, guid: d5425fb0c6ef566458c2b8c9eca21457, type: 2}

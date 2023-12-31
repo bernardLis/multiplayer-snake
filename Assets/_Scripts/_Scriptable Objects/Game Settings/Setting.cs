@@ -5,9 +5,13 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Setting : ScriptableObject
 {
-    public Vector2Int GridSize = new(31, 21);
-    public float SnakeSpeed = 1;
-    public float FoodSpawnRate = 1;
-    public Vector3 CameraPosition = new(15, 10, -10);
-    public float CameraSize = 12;
+    public List<SettingGridSize> GridSizeOptions = new();
+    public SettingGridSize GridSize;
+
+    public List<SettingSnake> SnakeOptions = new();
+    public SettingSnake Snake;
+
+    public List<SettingFood> FoodOptions = new();
+    public SettingFood Food;
+
 }
