@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b84c0f29814c57542b4c4703a0150189, type: 3}
-  m_Name: Grid Size Small
+  m_Name: Map Normal
   m_EditorClassIdentifier: 
-  Name: Small
-  GridSize: {x: 15, y: 9}
-  CameraPosition: {x: 7, y: 5, z: -10}
-  CameraSize: 6
+  Name: Normal
+  GridSize: {x: 31, y: 21}
+  CameraPosition: {x: 15, y: 10, z: -10}
+  CameraSize: 12

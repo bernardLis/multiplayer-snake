@@ -11,7 +11,8 @@ using UnityEngine.UI;
 public class MenuManager : Singleton<MenuManager>
 {
     AudioManager _audioManager;
-    [SerializeField] Sound MenuMusic;
+    [SerializeField] Sound _menuMusic;
+    [SerializeField] Setting _setting;
 
     VisualElement _root;
 
@@ -23,8 +24,7 @@ public class MenuManager : Singleton<MenuManager>
     void Start()
     {
         _audioManager = AudioManager.Instance;
-        _audioManager.PlayMusic(MenuMusic);
-
+        _audioManager.PlayMusic(_menuMusic);
 
         // get the root visual element
         _root = GetComponent<UIDocument>().rootVisualElement;
@@ -45,6 +45,8 @@ public class MenuManager : Singleton<MenuManager>
         playButtonContainer.Add(_playButton);
 
         // game settings
+        VisualElement settingsContainer = _root.Q<VisualElement>("settingsContainer");
+        settingsContainer.Add(new SettingsElement(_setting));
 
 
         // options optionsContainer

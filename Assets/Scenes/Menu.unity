@@ -313,7 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f5c3176bd7dcd741a37058ed64153ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuMusic: {fileID: 11400000, guid: 3aff7de3186b2e64d828baeb80c64b42, type: 2}
+  _menuMusic: {fileID: 11400000, guid: 3aff7de3186b2e64d828baeb80c64b42, type: 2}
+  _setting: {fileID: 11400000, guid: 1b1ba2657d22d91499a38a2156ad278c, type: 2}
   Snakes:
   - {fileID: 11400000, guid: 2be7d7ed5ffb47f4c8300dc0fe749cdb, type: 2}
   - {fileID: 11400000, guid: 034314bdfd2367a4287848a32697b73b, type: 2}
@@ -396,7 +397,7 @@ MonoBehaviour:
   - Sanoma
   - Daddario
   - Rudolph the Red
-  - Copacabana (Copa for short.)
+  - Copacabana
   - Little Bear
   - Diva
   - Southside
@@ -408,7 +409,7 @@ MonoBehaviour:
   - King Kong
   - Wobbler
   - Mandarin
-  - Cosmopolitan (Cosmo for short if you wish.)
+  - Cosmopolitan
   - Bacardi Orange
   - Bam Bam
   - Rider
@@ -430,7 +431,7 @@ MonoBehaviour:
   - Bombshell
   - Big Red
   - Regal
-  - Fraidy (great name for a cat)
+  - Fraidy
   - Munch
   - Chalupa
   - Cheesy

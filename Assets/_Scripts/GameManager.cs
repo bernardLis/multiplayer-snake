@@ -48,6 +48,8 @@ public class GameManager : Singleton<GameManager>
         fade.style.opacity = 1;
         Root.Add(fade);
 
+        _gridSize = new(Setting.Map.GridSize.x, Setting.Map.GridSize.y);
+
         DOTween.To(x => fade.style.opacity = x, fade.style.opacity.value, 0, 0.5f)
                 .OnComplete(() =>
                 {
@@ -69,8 +71,8 @@ public class GameManager : Singleton<GameManager>
             {
                 GameObject tile = Instantiate(_tilePrefab, new Vector3(x, y, 0), Quaternion.identity);
                 tile.transform.parent = _tileHolder;
-                if (y % 2 == 0)
-                    tile.GetComponent<Rectangle>().Color = Color.gray;
+                // if (y % 2 == 0)
+                //     tile.GetComponent<Rectangle>().Color = Color.gray;
                 _tiles.Add(tile);
             }
         }
@@ -94,8 +96,8 @@ public class GameManager : Singleton<GameManager>
     void SetUpCamera()
     {
         Camera camera = Camera.main;
-        camera.transform.position = Setting.GridSize.CameraPosition;
-        camera.orthographicSize = Setting.GridSize.CameraSize;
+        camera.transform.position = Setting.Map.CameraPosition;
+        camera.orthographicSize = Setting.Map.CameraSize;
     }
 
     public GameObject GetRandomFreeTile()

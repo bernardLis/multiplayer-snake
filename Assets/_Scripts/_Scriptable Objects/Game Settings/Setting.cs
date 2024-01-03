@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Setting : ScriptableObject
 {
-    public List<SettingGridSize> GridSizeOptions = new();
-    public SettingGridSize GridSize;
+    public List<SettingMap> MapOptions = new();
+    public SettingMap Map;
 
     public List<SettingSnake> SnakeOptions = new();
     public SettingSnake Snake;

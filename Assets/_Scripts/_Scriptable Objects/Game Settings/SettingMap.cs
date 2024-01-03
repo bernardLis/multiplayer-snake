@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class SettingGridSize : ScriptableObject
+public class SettingMap : ScriptableObject
 {
     public string Name;
     public Vector2Int GridSize;

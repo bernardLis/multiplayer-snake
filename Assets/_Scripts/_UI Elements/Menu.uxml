@@ -4,6 +4,9 @@
         <ui:VisualElement name="snakes" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: space-around; width: 100%;" />
         <ui:VisualElement name="options" style="flex-grow: 1;" />
         <ui:VisualElement name="playButtonContainer" style="flex-grow: 1;" />
-        <ui:VisualElement name="optionsContainer" style="flex-grow: 1;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="settingsContainer" style="flex-grow: 1; flex-shrink: 0; padding-top: 24px; padding-right: 24px; padding-bottom: 24px; padding-left: 24px; align-items: center; justify-content: center; align-self: center;" />
+            <ui:VisualElement name="optionsContainer" style="flex-grow: 1; flex-shrink: 0; padding-top: 24px; padding-right: 24px; padding-bottom: 24px; padding-left: 24px; align-items: center; justify-content: center; align-self: center;" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
