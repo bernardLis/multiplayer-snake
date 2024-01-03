@@ -13,6 +13,8 @@ public class SnakeController : MonoBehaviour
     PlayerInput _playerInput;
     Setting _setting;
 
+    GameTextDisplayer _gameTextDisplayer;
+
     Snake _snake;
 
     IEnumerator _moveCoroutine;
@@ -32,6 +34,7 @@ public class SnakeController : MonoBehaviour
         if (_gameManager == null) _gameManager = GameManager.Instance;
         _playerInput = _gameManager.GetComponent<PlayerInput>();
         _setting = _gameManager.Setting;
+        _gameTextDisplayer = GameTextDisplayer.Instance;
 
         _snake = snake;
         GetComponent<Triangle>().Color = _snake.Color;
@@ -126,6 +129,8 @@ public class SnakeController : MonoBehaviour
         _snakeSegments.Add(segment);
 
         _snake.Size++;
+        if (_snake.Size % 5 == 0)
+            _gameTextDisplayer.ShowText($"{_snake.Name} Size: {_snake.Size}");
     }
 
     public int GetSize()
@@ -135,6 +140,8 @@ public class SnakeController : MonoBehaviour
 
     public void Die()
     {
+        _gameTextDisplayer.ShowText($"{_snake.Name} Dies!");
+
         GameObject de = Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
         ParticleSystem.MainModule settings = de.GetComponent<ParticleSystem>().main;
         settings.startColor = _snake.Color;
@@ -167,6 +174,7 @@ public class SnakeController : MonoBehaviour
 
     public void Disco(float duration)
     {
+        _gameTextDisplayer.ShowText($"{_snake.Name} Disco!");
         StartCoroutine(DiscoCoroutine(duration));
     }
 
@@ -191,6 +199,7 @@ public class SnakeController : MonoBehaviour
 
     public void SpeedPickedUp(float duration)
     {
+        _gameTextDisplayer.ShowText($"{_snake.Name} Speed!");
         _speed = _setting.Snake.SnakeSpeed * 0.5f;
         StartCoroutine(EndSpeedCoroutine(duration));
     }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using DG.Tweening;
+using System;
+using Random = UnityEngine.Random;
 
 public class WonScreen : VisualElement
 {
@@ -40,4 +42,5 @@ public class WonScreen : VisualElement
         MyButton menuButton = new("Menu", callback: () => _gameManager.GoToMenu());
         buttons.Add(menuButton);
     }
+
 }
