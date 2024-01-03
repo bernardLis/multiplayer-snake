@@ -15,9 +15,10 @@ public class AudioManager : SingletonPersistent<AudioManager>
     AudioSource _musicAudioSource;
     List<AudioSource> _sfxAudioSources = new();
 
-
     Sound _currentMusicSound;
     int _currentMusicClipIndex;
+
+    bool _isPopulated;
 
     protected override void Awake()
     {
@@ -29,6 +30,9 @@ public class AudioManager : SingletonPersistent<AudioManager>
 
     void PopulateAudioSources()
     {
+        if (_isPopulated) return;
+        _isPopulated = true;
+        Debug.Log($"pop audio sources");
         GameObject musicGameObject = new("Music");
         musicGameObject.transform.parent = transform;
         _musicAudioSource = musicGameObject.AddComponent<AudioSource>();

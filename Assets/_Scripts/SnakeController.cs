@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using Shapes;
 using DG.Tweening;
 using System;
+using Random = UnityEngine.Random;
 
 public class SnakeController : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class SnakeController : MonoBehaviour
     [SerializeField] GameObject _snakeSegmentPrefab;
     List<Vector2> _positions = new();
     List<GameObject> _snakeSegments = new();
+
+    [SerializeField] GameObject _deathEffectPrefab;
 
     public event Action<Snake> OnDeath;
     public void Initialize(Snake snake)
@@ -132,6 +135,10 @@ public class SnakeController : MonoBehaviour
 
     public void Die()
     {
+        GameObject de = Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
+        ParticleSystem.MainModule settings = de.GetComponent<ParticleSystem>().main;
+        settings.startColor = _snake.Color;
+
         AudioManager.Instance.PlaySFX("Death");
         if (_moveCoroutine != null) StopCoroutine(_moveCoroutine);
         DOTween.Kill(transform);
@@ -155,4 +162,43 @@ public class SnakeController : MonoBehaviour
                 Die();
         }
     }
+
+    /* power ups */
+
+    public void Disco(float duration)
+    {
+        StartCoroutine(DiscoCoroutine(duration));
+    }
+
+    IEnumerator DiscoCoroutine(float duration)
+    {
+        float endTime = Time.time + duration;
+        while (true)
+        {
+            GetComponent<Triangle>().Color = Random.ColorHSV();
+
+            foreach (GameObject segment in _snakeSegments)
+                segment.GetComponent<Rectangle>().Color = Random.ColorHSV();
+
+            yield return new WaitForSeconds(0.2f);
+            if (Time.time > endTime) break;
+        }
+
+        GetComponent<Triangle>().Color = _snake.Color;
+        foreach (GameObject segment in _snakeSegments)
+            segment.GetComponent<Rectangle>().Color = _snake.Color;
+    }
+
+    public void SpeedPickedUp(float duration)
+    {
+        _speed = _setting.Snake.SnakeSpeed * 0.5f;
+        StartCoroutine(EndSpeedCoroutine(duration));
+    }
+
+    IEnumerator EndSpeedCoroutine(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        _speed = _setting.Snake.SnakeSpeed;
+    }
+
 }

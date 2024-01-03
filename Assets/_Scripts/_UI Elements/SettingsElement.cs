@@ -13,6 +13,7 @@ public class SettingsElement : VisualElement
         AddGridSizeDropdown();
         AddSnakeDropdown();
         AddFoodDropdown();
+        AddPowerUpBox();
     }
 
     void AddGridSizeDropdown()
@@ -55,5 +56,18 @@ public class SettingsElement : VisualElement
         {
             _setting.Food = _setting.FoodOptions[foodDropdown.index];
         });
+    }
+
+    void AddPowerUpBox()
+    {
+        Toggle powerUpToggle = new("Power Ups");
+        powerUpToggle.value = true;
+        Add(powerUpToggle);
+
+        powerUpToggle.RegisterValueChangedCallback((e) =>
+        {
+            _setting.IsPowerUpActive = powerUpToggle.value;
+        });
+
     }
 }

@@ -10,6 +10,8 @@ using UnityEngine.UI;
 
 public class MenuManager : Singleton<MenuManager>
 {
+    [SerializeField] AudioManager _audioMangerPrefab;
+
     AudioManager _audioManager;
     [SerializeField] Sound _menuMusic;
     [SerializeField] Setting _setting;
@@ -23,6 +25,8 @@ public class MenuManager : Singleton<MenuManager>
     public event Action OnGameStarted;
     void Start()
     {
+        if (AudioManager.Instance == null)
+            Instantiate(_audioMangerPrefab);
         _audioManager = AudioManager.Instance;
         _audioManager.PlayMusic(_menuMusic);
 

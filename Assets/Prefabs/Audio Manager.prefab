@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6830500740733979339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4514685634339450055}
+  - component: {fileID: 3143490136091346869}
+  - component: {fileID: 3538933997421750728}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4514685634339450055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830500740733979339}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3143490136091346869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830500740733979339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24bd70c4d25c8d46926eb2ebcbe2f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - {fileID: 11400000, guid: 6a79d9552922e6b45a863388d5191e1f, type: 2}
+  - {fileID: 11400000, guid: d477b3287e98ec249844e0618641a4e7, type: 2}
+  - {fileID: 11400000, guid: 6aa455b3a4ddd6f46822c305853e8acc, type: 2}
+  - {fileID: 11400000, guid: bab5efc00bc70d24fa98641d785c4b02, type: 2}
+  - {fileID: 11400000, guid: 4e74f039cbbc5f54fb77f229c0c12218, type: 2}
+  - {fileID: 11400000, guid: 19fc896bae603c343adedd07fa5c7088, type: 2}
+  - {fileID: 11400000, guid: 3aff7de3186b2e64d828baeb80c64b42, type: 2}
+  _mixer: {fileID: 24100000, guid: a52ea29baefdf854c81d2485ae166469, type: 2}
+--- !u!81 &3538933997421750728
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830500740733979339}
+  m_Enabled: 1

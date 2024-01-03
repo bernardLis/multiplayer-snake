@@ -14,4 +14,5 @@ public class Setting : ScriptableObject
     public List<SettingFood> FoodOptions = new();
     public SettingFood Food;
 
+    public bool IsPowerUpActive = true;
 }

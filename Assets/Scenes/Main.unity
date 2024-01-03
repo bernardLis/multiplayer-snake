@@ -227,6 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _foodHolder: {fileID: 645809682}
   _foodPrefab: {fileID: 4121053500583619489, guid: 5abc7ff8fdb3b9d468685ce1ccf77d05, type: 3}
+  _discoFoodPrefab: {fileID: 538746652903996072, guid: 958ad19db5abe8a4299a950f0507d983, type: 3}
+  _speedFoodPrefab: {fileID: -5892003494395052573, guid: eb2f439dd295bd047add058f13cf7d71, type: 3}
 --- !u!114 &253425002
 MonoBehaviour:
   m_ObjectHideFlags: 0
